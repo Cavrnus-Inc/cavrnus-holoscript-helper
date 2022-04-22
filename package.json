@@ -1,0 +1,25 @@
+{
+  "name": "@cavrnus/cavrnus-holoscript-helper",
+  "version": "0.1.0",
+  "description": "Boilerplate and example configuration and scripts to assist in developing and deploying holoscript within the Cavrnus platform",
+  "main": "build/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cavrnus-Inc/cavrnus-holoscript-helper.git"
+  },
+  "author": "Cavrnus, Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cavrnus-Inc/cavrnus-holoscript-helper/issues"
+  },
+  "homepage": "https://github.com/Cavrnus-Inc/cavrnus-holoscript-helper#readme",
+  "devDependencies": {
+    "@cavrnus/runtime": "^0.1.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  }
+}

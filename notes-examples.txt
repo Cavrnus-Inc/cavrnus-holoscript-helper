@@ -1,0 +1,85 @@
+/// <reference path="../def/holoscript.d.ts" />
+/// <reference path="../def/math.d.ts" />
+/// <reference path="../def/globals.d.ts" />
+
+// V1 example for reference:
+
+var sm = {}; // state machine def;
+function start(ctx : GlobalContext) // execution environment searches for 'start' and runs when appropriate to setup machines.
+{
+    ctx.startStateMachine('machineId', sm);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Several use cases for script modules:
+
+// 1- As a library to be used by other scripts.
+//    - import from cavrnus library functionality? Versioning? OMG oops we made npm.
+
+function providedFunctionImpl(args : any) : unknown
+{
+    // does stuff when called. Does not describe when it gets called, just there for import()
+}
+export const providedFunction = providedFunctionImpl;
+
+
+// 2A- As a utility single-run function to be executed on demand.
+//    - some metadata to describe where this function can be executed? In the top bar? 
+
+import cavrnusruntime from 'cavrnus-runtime'; // runtime-module would be how scripts interact with their execution environment.
+import myOwnHelperFunctions from 'roomscoped? libraryscoped? wtf?'?
+
+function setsUpSomeStuff(buttonContext : somecontext) : void
+{
+    var exec = cavrnusruntime.beginOperations();
+    context.updateproperty(...);
+
+    var obs : LibraryEntry[] = cavrnusruntime.searchLibrary({name:'byname?', ...});
+    context.insertobject(...);
+    context.commit();
+}
+
+var newOb = cavrnusruntime.once? oninsert? setup?(()=>
+{
+    var newOb = createAnObject();
+    return newOb;
+}); // RESULTS FROM this FUNCTION HAVE TO BE PERSISTED INSIDE THE CREATION-OP FOR THE SCRIPT-INSERTION
+
+newOb.bindProperty(arg);
+cavrnusrutnime.shutdown? Cleanup dependencies if script is removed?
+
+cavrnusruntime.includeAction(cavrnusruntime.RIBBONMENU, {button metadata/ui info}, setsUpSomeStuff);
+cavrnusruntime.ensureProeprtyIDDefined(...); // define it if not defined, because this will run by every user in the room on entry.
+
+cavrnusruntime.bindProperty((ev)=>dostuff) // => also is an op!? How does the op carry the executing code? WTF? Does it refer to the source script somehow?
+
+// 2B - As a utility function run from the REPL in immediate mode (context-less)
+
+// 3- As a state machine (current holoscript v1 usage here)
+//   unlike other cases, statemachine scripts have to be bound to an object in the room; they need to syncronize and persist. They may
+//   need a different way to be established to make that clearer?
+//   Maybe the cavrnusruntime object can differentiate fine; the system will be injecting that module (as C# code), so when
+//   run from a state-machine-capable context it'll work, but otherwise be ignored?
+
+var sm = {}; // state machine definition looks like v1.
+
+cavrnusruntime.currentContext //? for whe run on an object directly? i.e. from a holo file
+var obCtx = cavrnusruntime.searchforObject({name: 'wh?'});
+
+cavrnusruntime.startStateMachine(OBJECT CONTEXT? (obctx), 'uniqueid', sm); // global-scope setup call.
+
+// content Metadata considerations? version+modulename in object metadata, not unlike holo metadata has some extra stuff there? 
+// Scripts-in-library? Permissions on scripts in library?
+
+
