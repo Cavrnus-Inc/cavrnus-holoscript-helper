@@ -1,24 +1,13 @@
 {
-  "name": "testmodule",
-  "version": "0.1.5",
-  "description": "Boilerplate and example configuration and scripts to assist in developing and deploying holoscript within the Cavrnus platform",
+  "name": "{{name}}",
+  "version": "0.1.0",
+  "description": "{{description}}",
   "main": "src/script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "predeploy": "yarn version --patch",
     "deploy": "yarn build && cross-var cavcli scripttest $npm_package_main $npm_package_name $npm_package_version -r \"$npm_package_cavrnus_testroom\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Cavrnus-Inc/cavrnus-holoscript-helper.git"
-  },
-  "author": "Cavrnus, Inc.",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Cavrnus-Inc/cavrnus-holoscript-helper/issues"
-  },
-  "homepage": "https://github.com/Cavrnus-Inc/cavrnus-holoscript-helper#readme",
   "devDependencies": {
     "@cavrnus/cli": "^0.1.1",
     "@cavrnus/runtime": "^0.1.0",
@@ -27,6 +16,6 @@
     "typescript": "^4.6.2"
   },
   "cavrnus": {
-    "testroom": "Repl Test Space 1"
+    "testroom": "{{testroom}}"
   }
 }
