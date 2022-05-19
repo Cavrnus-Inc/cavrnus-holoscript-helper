@@ -6,10 +6,11 @@
   "scripts": {
     "build": "tsc",
     "predeploy": "yarn version --patch",
-    "deploy": "yarn build && cross-var cavcli scripttest $npm_package_main $npm_package_name $npm_package_version -r \"$npm_package_cavrnus_testroom\""
+    "deploy": "yarn build && cross-var cavcli scriptdeploy $npm_package_main $npm_package_name $npm_package_version -r \"$npm_package_cavrnus_testroom\"",
+    "fetch": "corss-var cavcli scriptenv \"$npm_package_cavrnus_testroom\" \"$npm_package_name\"",
   },
   "devDependencies": {
-    "@cavrnus/cli": "^0.1.1",
+    "@cavrnus/cli": "^0.1.2",
     "@cavrnus/runtime": "^0.1.0",
     "cross-var": "^1.1.0",
     "ts-node": "^10.7.0",
