@@ -40,3 +40,5 @@ let rotatorTime = cav.setup(()=>
 {
     // shut down
 }, 'setupRotatorTime');
+
+export function arg(x:number) : string { return ""+x; }
