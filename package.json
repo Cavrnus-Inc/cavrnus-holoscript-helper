@@ -8,7 +8,7 @@
   "scripts": {
     "build": "tsc",
     "predeploy": "yarn version --patch",
-    "deploy": "yarn build && cross-var cavcli scriptdeploy $npm_package_main $npm_package_name $npm_package_version -r \"$npm_package_cavrnus_testroom\"",
+    "deploy": "yarn build && cross-var cavcli scriptdeploy ./ $npm_package_name $npm_package_version -r \"$npm_package_cavrnus_testroom\"",
     "scriptenv": "cross-var cavcli scriptenv \"$npm_package_cavrnus_testroom\" \"$npm_package_name\""
   },
   "devDependencies": {
