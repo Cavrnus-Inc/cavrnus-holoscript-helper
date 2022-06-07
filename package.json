@@ -4,6 +4,7 @@
   "description": "{{description}}",
   "main": "src/script.js",
   "types": "src/script.d.ts",
+  "module": "src/script.js",
   "license": "ISC",
   "scripts": {
     "build": "tsc",
