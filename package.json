@@ -2,9 +2,9 @@
   "name": "{{name}}",
   "version": "0.1.0",
   "description": "{{description}}",
-  "main": "src/script.js",
-  "types": "src/script.d.ts",
-  "module": "src/script.js",
+  "main": "dist/script.js",
+  "types": "dist/script.d.ts",
+  "module": "dist/script.js",
   "license": "ISC",
   "scripts": {
     "build": "tsc",
@@ -17,6 +17,8 @@
     "@cavrnus/cli": "^0.1.10",
     "@cavrnus/runtime": "^0.1.19",
     "cross-var": "^1.1.0",
+    "rollup": "^2.77.0",
+    "rollup-plugin-dts": "^4.2.2",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.2"
   },

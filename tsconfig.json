@@ -12,6 +12,7 @@
     "pretty": true,
     "baseUrl": ".",
     "paths": {"*": ["./library/*", "*"]},
-    "typeRoots": ["./library", "./node_modules/@types"]
+    "typeRoots": ["./library", "./node_modules/@types"],
+    "outDir": "build"
   }
 }
