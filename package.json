@@ -11,11 +11,12 @@
     "predeploy": "yarn version --patch",
     "deploy": "yarn build && cross-var cavcli scriptdeploy ./ $npm_package_name $npm_package_version -r \"$npm_package_cavrnus_testroom\"",
     "deployto": "yarn build && cross-var cavcli scriptdeployto ./ $npm_package_name $npm_package_version",
+    "deploytosave": "yarn build && cross-var cavcli scriptdeployto -s ./ $npm_package_name $npm_package_version",
     "scriptenv": "cross-var cavcli scriptenv \"$npm_package_cavrnus_testroom\" \"$npm_package_name\""
   },
   "devDependencies": {
-    "@cavrnus/cli": "^0.1.10",
-    "@cavrnus/runtime": "^0.1.19",
+    "@cavrnus/cli": "^0.3.42",
+    "@cavrnus/runtime": "^0.3.14",
     "cross-var": "^1.1.0",
     "rollup": "^2.77.0",
     "rollup-plugin-dts": "^4.2.2",
