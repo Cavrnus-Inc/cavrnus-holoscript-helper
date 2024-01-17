@@ -9,14 +9,14 @@
   "scripts": {
     "build": "tsc && rollup -c rollup.config.js",
     "predeploy": "yarn version --patch",
-    "deploy": "yarn build && cross-var cavcli scriptdeploy -r \"$npm_package_cavrnus_testroom\" ./ $npm_package_name $npm_package_version",
+    "deploy": "yarn build && cross-var cavcli scriptdeploy -r \"$npm_package_cavrnus_testroom|$npm_package_cavrnus_assignproperty\" ./ $npm_package_name $npm_package_version",
     "deployto": "yarn build && cross-var cavcli scriptdeployto ./ $npm_package_name $npm_package_version",
     "deploytosave": "yarn build && cross-var cavcli scriptdeployto -s ./ $npm_package_name $npm_package_version",
     "scriptenv": "cross-var cavcli scriptenv \"$npm_package_cavrnus_testroom\" \"$npm_package_name\""
   },
   "devDependencies": {
-    "@cavrnus/cli": "^0.4.4",
-    "@cavrnus/runtime": "^0.3.14",
+    "@cavrnus/cli": "^0.4.22",
+    "@cavrnus/runtime": "^0.3.40",
     "cross-var": "^1.1.0",
     "rollup": "^2.77.0",
     "rollup-plugin-dts": "^4.2.2",
@@ -24,6 +24,7 @@
     "typescript": "^4.6.2"
   },
   "cavrnus": {
-    "testroom": "{{testroom}}"
+    "testroom": "{{testroom}}",
+    "assignproperty": ""
   }
 }
