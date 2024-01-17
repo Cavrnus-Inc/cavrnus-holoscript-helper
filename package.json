@@ -15,8 +15,8 @@
     "scriptenv": "cross-var cavcli scriptenv \"$npm_package_cavrnus_testroom\" \"$npm_package_name\""
   },
   "devDependencies": {
-    "@cavrnus/cli": "^0.4.22",
-    "@cavrnus/runtime": "^0.3.40",
+    "@cavrnus/cli": "^0.4.23",
+    "@cavrnus/runtime": "^0.3.42",
     "cross-var": "^1.1.0",
     "rollup": "^2.77.0",
     "rollup-plugin-dts": "^4.2.2",
